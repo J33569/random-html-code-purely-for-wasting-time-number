@@ -88,6 +88,7 @@
                 padding: 0;
                 overflow: hidden;
                 background-color: #333333;
+                min-height: 46.4px;
             }
             ul li {
                 float: left;
@@ -125,6 +126,7 @@
                 min-width: 160px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                 z-index: 1;
+                right: 0;
             }
             .dropdown-content a {
                 color: white;
@@ -143,6 +145,59 @@
                 position: sticky;
                 top: 0;
             }
+            ul li a.act2
+        </style>
+        <style>
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 40px;
+                height: 22.7px;
+            }    
+            .switch input{
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ff0;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+            .slider:before {
+                position: absolute;
+                content: '';
+                height: 18px;
+                width: 18px;
+                left: 2px;
+                bottom: 2px;
+                background-color: #fff;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+            input:checked + .slider{
+                background-color: #2c2c2c;
+            }
+            input:focus + .slider{
+                box-shadow: #2196f3;
+            }
+            input:checked + .slider:before{
+                -webkit-transform: translateX(17px);
+                -ms-transform: translateX(17px);
+                transform: translateX(17px);
+            }
+            .slider.round{
+                border-radius: 34px;
+            }
+            .slider.round:before{
+                border-radius: 50%;
+            }
         </style>
     </head> 
     <body> 
@@ -151,23 +206,40 @@
             <li><a href='3html-code.vercel.app' class='active'>Home</a></li>
             <li><a href='2html-code.vercel.app'>Contacts</a></li>
             <li><a href='1html-code.vercel.app'>About</a></li>
-            <li style='float:right' class='dropdown'><a href='javascript:void(0)' class='dropbtn'>Ect.</a>
+            <li style='float:right' class='dropdown'><a href='javascript:void(0)' class='dropbtn act2'>Ect.</a>
             <div class='dropdown-content'>
                 <a href=''>Link 1</a>
                 <a href=''>Link 2</a>
                 <a href=''>Link 3</a>
+                <a>
+                    'Light/Dark'
+                    <label class='switch' style="position: absolute; right: 0; margin-right: 3px; margin-bottom: 5.35px;">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </a>
             </div>
             </li>
         </ul>
+        <div>
         <h1>text 1 here</h1>
         <p1>paragraph 1 here</p1>
+        </div>
+        <div>
         <h2>text 2 here</h2>
         <p2>paragraph 2 here</p2>
+        </div>
+        <div>
         <h3>text 3 here</h3> 
         <p3>paragraph 3 here</p3>
+        </div>
+        <div>
         <h2>text 4 here</h2> 
         <p2>paragraph 4 here</p2>
+        </div>
+        <div>
         <h3>text 5 here</h3> 
         <p3>paragraph 5 here</p3>
+        </div>
     </body>
 </html>
